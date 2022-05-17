@@ -125,6 +125,8 @@ const links = [
   },
 ]
 
+import CssBorderGenerator from '../components/generators/css/cssBorderGenerator'
+
 // markup
 const IndexPage = () => {
   return (
@@ -140,6 +142,7 @@ const IndexPage = () => {
         Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this page
         update in real-time. 😎
       </p>
+      <CssBorderGenerator />
       <ul style={listStyles}>
         <li style={docLinkStyle}>
           <a

@@ -1,11 +1,11 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import * as React from 'react'
+import { Link } from 'gatsby'
 
 type Props = {
   children: React.ReactNode,
 };
 
-const Layout = ({ children }: Props) => {
+function Layout ({ children }: Props): JSX.Element {
   return (
     <div>
       <nav>

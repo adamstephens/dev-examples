@@ -3,24 +3,8 @@
   border: solid 1px black;
 }
 
-.foo {
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  right: 0;
-  display: inline-block;
-  overflow: hidden;
-  width: 100px;
-  height: 100px;
-  box-sizing: border-box;
-  padding: 10px;
-  border: 10px solid #333;
-  margin: 10px;
-  background: #000;
-  color: #fff;
-  cursor: pointer;
-  font-family: sans-serif;
-  font-size: 16px;
-  line-height: 1.4;
-  text-align: right;
+.dynamic-element {
+  width: 200px;
+  height: 200px;
+  background-color: #ccc;
 }

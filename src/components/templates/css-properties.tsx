@@ -3,8 +3,9 @@ import { graphql, Link } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '../layouts/layout'
+import { Light as SyntaxHighlighter } from 'react-syntax-highlighter'
 
-const shortcodes = { Link } // Provide common components here
+const shortcodes = { Link, SyntaxHighlighter } // Provide common components here
 
 type Props = {
   data: {

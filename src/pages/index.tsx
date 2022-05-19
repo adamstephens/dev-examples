@@ -1,6 +1,4 @@
 import * as React from 'react'
-
-import CssBorderGenerator from '../components/generators/css/cssBorderGenerator'
 import Layout from '../components/layouts/layout'
 
 // styles
@@ -148,7 +146,6 @@ const IndexPage = (): JSX.Element => {
           to see this page
           update in real-time. 😎
         </p>
-        <CssBorderGenerator />
         <ul style={listStyles}>
           <li style={docLinkStyle}>
             <a

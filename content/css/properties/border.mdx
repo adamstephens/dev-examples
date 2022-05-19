@@ -5,18 +5,64 @@ category: "css"
 
 import CssBorderGenerator from "/src/components/generators/css/cssBorderGenerator.tsx";
 
-Some introduction text. Lists out all the headings from h1 to h6. Markdown link handling for relative and absolute URLs. Easy to customise.
+## What is it?
+
+The border property is a shorthand property for setting the same width, color, and style for all four borders of a box.
+
+### Syntax
+
+<SyntaxHighlighter language="css" useInlineStyles={false}>
+  {`border: <border-style> <border-width> <border-color>`}
+</SyntaxHighlighter>
+
+## Code generator
 
 <CssBorderGenerator />
 
-## Lists
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-- Item 5
+## Considerations
 
-## Links
+Using the border property is the equivilent of setting the individual properties:
 
-* Relative: [Codeblock](/codeblock)
-* Absolute: [Demo](https://learn.hasura.io/graphql/react)
+- <Link to="/css/properties/border-width">border-width</Link>
+- <Link to="/css/properties/border-style">border-style</Link>
+- <Link to="/css/properties/border-color">border-color</Link>
+
+For example, the two rules below are identical.
+
+<SyntaxHighlighter language="css" useInlineStyles={false}>
+  {`p {
+  border: solid 1px red;
+}
+  
+p {
+  border-top: solid 1px red;
+  border-right: solid 1px red;
+  border-bottom: solid 1px red;
+  border-left: solid 1px red
+}`}
+</SyntaxHighlighter>
+
+The order in which the rules are specified can be important.
+
+For example:
+
+<SyntaxHighlighter language="css" useInlineStyles={false}>
+  {`p {
+  border-left: dashed 2px blue;
+  border: solid 1px red;
+}`}
+</SyntaxHighlighter>
+
+In the above example, all of the borders will be solid red, because the *border-left* property will be overuled by the subsequent *border* property.
+
+## Browser support
+
+## Related properties
+
+The shorthand properties for setting the width, color, and style for a **single** side of an element
+
+- <Link to="/css/properties/border-top">border-top</Link>
+- <Link to="/css/properties/border-right">border-right</Link>
+- <Link to="/css/properties/border-bottom">border-bottom</Link>
+- <Link to="/css/properties/border-left">border-left</Link>
+

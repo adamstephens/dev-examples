@@ -4,8 +4,9 @@ import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '../layouts/Layout'
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter'
+import BrowserSupport from '../common/BrowserSupport'
 
-const shortcodes = { Link, SyntaxHighlighter } // Provide common components here
+const shortcodes = { Link, SyntaxHighlighter, BrowserSupport } // Provide common components here
 
 type Props = {
   data: {

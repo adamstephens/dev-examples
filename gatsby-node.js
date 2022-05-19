@@ -31,7 +31,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       // You can prepend it with any prefix you want
       path: `/${node.slug}`,
       // This component will wrap our MDX content
-      component: path.resolve('./src/components/templates/css-properties.tsx'),
+      component: path.resolve('./src/components/templates/CssProperties.tsx'),
       // You can use the values in this context in
       // our page layout component
       context: { id: node.id }

@@ -6,10 +6,7 @@ import Select, { SelectChangeEvent } from '@mui/material/Select'
 import InputLabel from '@mui/material/InputLabel'
 import MenuItem from '@mui/material/MenuItem'
 import FormControl from '@mui/material/FormControl'
-import FormControlLabel from '@mui/material/FormControlLabel'
-import FormLabel from '@mui/material/FormLabel'
-import Radio from '@mui/material/Radio'
-import RadioGroup from '@mui/material/RadioGroup'
+import { HexColorPicker, HexColorInput } from 'react-colorful'
 
 import * as styles from './cssBorderGenerator.module.scss'
 import '../../../styles/highlight.css'
@@ -37,8 +34,8 @@ const CssBorderGenerator = (): JSX.Element => {
   }
 
   // Update the state when border-color changes
-  const handleColorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setBorderColor((event.target as HTMLInputElement).value)
+  const handleColorChange = (newColor: string) => {
+    setBorderColor(newColor)
   }
 
   return (
@@ -83,20 +80,8 @@ const CssBorderGenerator = (): JSX.Element => {
           </Select>
         </FormControl>
 
-        <FormControl>
-          <FormLabel id="demo-radio-buttons-group-label">Set border color</FormLabel>
-          <RadioGroup
-            aria-labelledby="demo-radio-buttons-group-label"
-            defaultValue={borderColor}
-            name="radio-buttons-group"
-            onChange={handleColorChange}
-          >
-            <FormControlLabel value="#000000" control={<Radio />} label="Black" />
-            <FormControlLabel value="#FF0000" control={<Radio />} label="Red" />
-            <FormControlLabel value="#00FF00" control={<Radio />} label="Green" />
-            <FormControlLabel value="#0000FF" control={<Radio />} label="Blue" />
-          </RadioGroup>
-        </FormControl>
+        <HexColorPicker color={borderColor} onChange={handleColorChange} />
+        <HexColorInput color={borderColor} onChange={handleColorChange} />
       </form>
 
       <SyntaxHighlighter language="css" useInlineStyles={false}>

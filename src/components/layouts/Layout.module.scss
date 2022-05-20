@@ -1,0 +1,34 @@
+.layout-wrapper {
+  display: grid;
+  height: 100vh;
+  grid-gap: 16px;
+  grid-template:
+    "header header header" auto
+    "nav main ads" 1fr
+    "footer footer footer" 70px / 20% 1fr 15%;
+}
+
+.layout-header {
+  background-color: #eaeaea;
+  grid-area: header;
+}
+
+.layout-nav-column {
+  background-color: #eaeaea;
+  grid-area: nav;
+}
+
+.layout-main {
+  background-color: #eaeaea;
+  grid-area: main;
+}
+
+.layout-ads {
+  background-color: #eaeaea;
+  grid-area: ads;
+}
+
+.layout-footer {
+  background-color: #eaeaea;
+  grid-area: footer;
+}

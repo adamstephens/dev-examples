@@ -1,0 +1,32 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "standard",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "react/prop-types": 0,
+    "camelcase": "off",
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": [
+      "error"
+    ],
+    "@typescript-eslint/no-explicit-any": "off"
+  }
+}

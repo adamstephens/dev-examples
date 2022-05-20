@@ -1,37 +1,29 @@
 import * as React from 'react'
+import * as styles from './BrowserSupport.module.scss'
 
 type Props = {
-  browsers: {
-    ie: string,
-    edge: string,
-    firefox: string,
-    chrome: string,
-    safari: string,
-    opera: string,
-  }
+  browsers: [
+    {
+      name: string,
+      version: string
+    }
+  ]
 }
 
 function BrowserSupport ({ browsers }: Props): JSX.Element {
+  const tableHeaders = browsers.map((browser) => <th key={browser.name}>{browser.name}</th>)
+  const tableCells = browsers.map((browser) => <td key={browser.name} className={`${browser.version ? styles.supported : styles.notSupported}`}>{browser.version}</td>)
+
   return (
     <table>
       <thead>
         <tr>
-          <th>IE</th>
-          <th>Edge</th>
-          <th>Firefox</th>
-          <th>Chrome</th>
-          <th>Safari</th>
-          <th>Opera</th>
+          {tableHeaders}
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>{browsers.ie}</td>
-          <td>{browsers.edge}</td>
-          <td>{browsers.firefox}</td>
-          <td>{browsers.chrome}</td>
-          <td>{browsers.safari}</td>
-          <td>{browsers.opera}</td>
+          {tableCells}
         </tr>
       </tbody>
     </table>

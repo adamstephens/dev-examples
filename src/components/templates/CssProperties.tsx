@@ -5,6 +5,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '../layouts/Layout'
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter'
 import BrowserSupport from '../common/BrowserSupport'
+import CssNavigation from '../navigations/CssNavigation'
 
 const shortcodes = { Link, SyntaxHighlighter, BrowserSupport } // Provide common components here
 
@@ -21,7 +22,7 @@ type Props = {
 
 const CssPropertiesTemplate = ({ data: { mdx } }: Props) => {
   return (
-    <Layout>
+    <Layout navCol={<CssNavigation/>}>
       <h1>{mdx.frontmatter.title}</h1>
       <MDXProvider components={shortcodes}>
         <MDXRenderer frontmatter={mdx.frontmatter}>{mdx.body}</MDXRenderer>

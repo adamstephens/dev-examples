@@ -10,7 +10,7 @@ type Props = {
   ]
 }
 
-function BrowserSupport ({ browsers }: Props): JSX.Element {
+const BrowserSupport = ({ browsers }: Props): JSX.Element => {
   const tableHeaders = browsers.map((browser) => <th key={browser.name}>{browser.name}</th>)
   const tableCells = browsers.map((browser) => <td key={browser.name} className={`${browser.version ? styles.supported : styles.notSupported}`}>{browser.version}</td>)
 
